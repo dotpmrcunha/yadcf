@@ -2826,7 +2826,7 @@ var yadcf = (function ($) {
 				if (oTable.fnSettings().oFeatures.bServerSide !== true) {
 					oTable.fnDraw();
 				} else {
-					oTable.fnFilter(document.getElementById(fromId).value + '-yadcf_delim-' + document.getElementById(toId).value, column_number);
+					oTable.fnFilter(document.getElementById(fromId).value + '-yadcf_delim-' + document.getElementById(toId).value , $('th').has($("#" + $(event.target).attr("id"))).attr("data-column-index"));
 				}
 
 				if (min instanceof Date) {
