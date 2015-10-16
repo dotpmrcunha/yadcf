@@ -1417,7 +1417,7 @@ var yadcf = (function ($) {
 		if (oTable.fnSettings().oFeatures.bServerSide !== true) {
 			oTable.fnDraw();
 		} else {
-			oTable.fnFilter(from + '-yadcf_delim-' + to, column_number);
+			oTable.fnFilter(from + '-yadcf_delim-' + to, $('th').has($("#" + $(event).attr("id"))).attr("data-column-index"));
 		}
 
 		if (!oTable.fnSettings().oLoadedState) {
